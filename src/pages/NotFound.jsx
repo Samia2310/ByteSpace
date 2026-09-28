@@ -3,19 +3,34 @@ import Navbar from '../components/Navbar'
 
 export default function NotFound() {
   return (
-    <>
-      <Navbar />
-      <div className="max-w-[1200px] mx-auto px-6 py-32 text-center">
-        <p className="text-brand-blue font-extrabold text-7xl mb-4">404</p>
-        <h1 className="text-2xl sm:text-3xl font-extrabold mb-3">Page not found</h1>
-        <p className="text-gray-500 mb-8">The page you're looking for doesn't exist or has been moved.</p>
+    <section className="relative bg-brand-blue bg-grid overflow-hidden">
+      <Navbar transparent />
+
+      <div className="relative z-10 max-w-3xl mx-auto px-6 pt-10 pb-24 text-center">
+        <p
+          className="font-extrabold leading-none text-[6.5rem] sm:text-[9rem] md:text-[11rem] bg-clip-text text-transparent"
+          style={{
+            backgroundImage: 'linear-gradient(to bottom, #D4F72E 0%, #D4F72E 45%, #1A2CF0 90%)',
+          }}
+        >
+          404
+        </p>
+
+        <h1 className="text-white font-extrabold text-2xl sm:text-4xl md:text-5xl leading-tight -mt-6 sm:-mt-10">
+          The page you are looking for doesn&apos;t exist
+        </h1>
+
+        <p className="text-white/80 mt-6 max-w-lg mx-auto">
+          Try to use a correct url or go back to homepage to start again
+        </p>
+
         <Link
           to="/"
-          className="inline-block bg-brand-lime text-[#14142B] font-semibold px-8 py-3 rounded-full hover:brightness-95 transition"
+          className="inline-block mt-8 bg-brand-lime text-[#14142B] font-semibold px-8 py-3.5 rounded-full hover:brightness-95 transition"
         >
           Back to Home
         </Link>
       </div>
-    </>
+    </section>
   )
 }
