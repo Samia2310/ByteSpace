@@ -1,4 +1,5 @@
 import Squiggle from '../decorations/Squiggle'
+import girlFigure from '../../assets/girl.png'
 
 const bullets = [
   'Share Your Expertise',
@@ -9,32 +10,34 @@ const bullets = [
 
 export default function CreateManage() {
   return (
-    <section className="max-w-[1200px] mx-auto px-6 py-20 grid grid-cols-1 md:grid-cols-2 gap-14 items-center">
-      <div className="relative flex justify-center md:justify-start order-2 md:order-1">
-        <Squiggle color="#D4F72E" className="absolute -right-2 top-6 w-16 h-28 hidden sm:block" />
-        <div className="relative w-[280px] sm:w-[320px]">
+    <section className="section-wash py-24">
+      <div className="max-w-[1280px] mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-14 items-center">
+        <div className="relative flex justify-center md:justify-start order-2 md:order-1">
+        <Squiggle color="#D4F72E" className="absolute left-[61%] top-32 w-20 h-32 hidden sm:block z-20" />
+        <div className="relative w-full max-w-[600px] min-h-[560px]">
+          <div className="absolute inset-x-16 bottom-4 h-72 rounded-full bg-gradient-to-t from-indigo-100/80 via-white/70 to-transparent blur-2xl" />
           <img
-            src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=500&q=80"
+            src={girlFigure}
             alt="Creator wearing a headset holding a tablet"
-            className="rounded-2xl w-full h-[360px] object-cover"
+            className="relative z-10 mx-auto w-[330px] sm:w-[420px] h-auto max-h-[580px] object-contain drop-shadow-[0_24px_24px_rgba(20,20,43,0.16)]"
           />
-          <div className="absolute -left-8 top-6 bg-brand-blue text-white rounded-2xl shadow-lg px-4 py-3 w-[160px]">
+          <div className="absolute left-0 top-0 bg-brand-blue text-white rounded-2xl shadow-lg px-5 py-4 w-[230px] sm:w-[270px] z-0">
             <p className="text-xs opacity-80">Total Revenue</p>
             <p className="text-[10px] opacity-60">July 1-28</p>
-            <p className="font-extrabold text-xl mt-1">$120.29</p>
+            <p className="font-extrabold text-2xl mt-1">$120.29</p>
             <div className="h-1.5 bg-white/20 rounded-full mt-2 overflow-hidden">
               <div className="h-full bg-brand-lime w-[70%]" />
             </div>
           </div>
-          <div className="absolute -left-10 top-40 bg-brand-blue text-white rounded-2xl shadow-lg px-4 py-3 w-[160px]">
+          <div className="absolute left-0 top-40 bg-brand-blue text-white rounded-2xl shadow-lg px-5 py-4 w-[190px] sm:w-[230px] z-0">
             <p className="text-xs opacity-80">Year to Date</p>
             <p className="text-[10px] opacity-60">2023</p>
-            <p className="font-extrabold text-xl mt-1">$1,200.38</p>
+            <p className="font-extrabold text-2xl mt-1">$1,200.38</p>
             <span className="inline-block mt-1 bg-brand-lime text-[#14142B] text-[10px] font-semibold px-2 py-0.5 rounded-full">
               +12$
             </span>
           </div>
-          <div className="absolute -bottom-6 right-0 bg-white rounded-2xl shadow-lg px-4 py-3 w-[190px]">
+          <div className="absolute left-[48%] bottom-0 bg-white rounded-2xl shadow-lg px-5 py-4 w-[250px] sm:w-[276px] z-20">
             <p className="text-gray-500 text-xs">Happy Students</p>
             <p className="font-semibold text-sm mt-1">4.5 <span className="text-gray-400">(240)</span> ⭐</p>
             <div className="flex items-center mt-2">
@@ -52,27 +55,28 @@ export default function CreateManage() {
             </div>
           </div>
         </div>
-      </div>
+        </div>
 
-      <div className="order-1 md:order-2">
-        <h2 className="text-3xl sm:text-4xl font-extrabold leading-tight">
+        <div className="order-1 md:order-2">
+        <h2 className="text-[#202032] text-4xl sm:text-5xl font-extrabold leading-[1.08]">
           Create & Manage Courses Easily.
         </h2>
-        <p className="text-gray-500 mt-5 text-sm md:text-base max-w-md">
+        <p className="text-[#626575] mt-8 text-base md:text-lg leading-[1.6] max-w-lg">
           <span className="font-semibold text-[#14142B]">ByteSpace</span> supports individuals or
           entities in the creation, publication, and administration of educational courses.
         </p>
 
-        <ul className="mt-6 flex flex-col gap-3">
+        <ul className="mt-8 flex flex-col gap-4">
           {bullets.map((b) => (
             <li key={b} className="flex items-center gap-3">
-              <span className="w-5 h-5 rounded-full bg-blue-600 text-white flex items-center justify-center text-[11px] shrink-0">
+              <span className="w-6 h-6 rounded-full bg-blue-600 text-white flex items-center justify-center text-xs shrink-0">
                 ✓
               </span>
               <span className="text-[#14142B]">{b}</span>
             </li>
           ))}
         </ul>
+        </div>
       </div>
     </section>
   )

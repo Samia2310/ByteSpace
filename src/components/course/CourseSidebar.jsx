@@ -101,7 +101,7 @@ export default function CourseSidebar({ courseId, remainingLessons = 99, totalLe
             Ready to Dive In? Enroll Now and Start Building Your Digital Future!
           </p>
           <Link
-            to={`/creator/${courseId}`}
+            to={`/creator/${creator.id}`}
             className="inline-block border border-gray-200 rounded-full px-5 py-2.5 text-sm font-medium hover:bg-gray-50 transition"
           >
             See Full Profile

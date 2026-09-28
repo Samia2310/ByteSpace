@@ -1,21 +1,26 @@
 import Squiggle from '../decorations/Squiggle'
 import Triangle3D from '../decorations/Triangle3D'
 import Ring from '../decorations/Ring'
+import { Link } from 'react-router-dom'
+import logo from '../../assets/logo.png'
 
 export default function AuthVisual({ heading, description }) {
   return (
-    <div className="relative hidden lg:flex lg:w-1/2 min-h-screen bg-brand-blue bg-grid overflow-hidden items-center">
-      <Ring color="#D4F72E" size={90} className="absolute left-[18%] top-[22%] z-20" />
-      <Triangle3D className="absolute left-[6%] bottom-[10%] w-24 h-24 z-20" />
-      <Squiggle color="#ffffff" className="absolute right-[10%] bottom-[24%] w-16 h-28 z-20" />
+    <div className="relative hidden lg:flex lg:w-1/2 min-h-screen overflow-hidden items-center">
+      <Link to="/" aria-label="ByteSpace home" className="absolute left-14 xl:left-20 top-0 z-30">
+        <img src={logo} alt="ByteSpace" className="w-[150px] h-auto" />
+      </Link>
+      <Triangle3D className="absolute left-[6%] bottom-[4%] w-24 h-24 z-20" />
+      <Squiggle color="#ffffff" className="absolute right-[10%] bottom-[18%] w-16 h-28 z-20" />
 
-      <div className="relative z-10 px-14 xl:px-20 w-full">
+      <div className="relative z-10 px-14 xl:px-20 w-full -translate-y-10">
         <h2 className="text-white text-3xl xl:text-4xl font-extrabold mb-4">{heading}</h2>
-        <p className="text-white/80 max-w-sm mb-14">{description}</p>
+        <p className="text-white/80 text-[17px] leading-[1.55] max-w-[390px] mb-14">{description}</p>
 
-        <div className="relative w-[340px] h-[320px]">
+        <div className="relative w-[410px] h-[380px]">
+          <Ring color="#D4F72E" size={78} className="absolute left-[62px] top-[-2px] z-30 w-[78px] h-[62px] rotate-[-12deg]" />
           {/* Back card */}
-          <div className="absolute left-0 top-6 w-[220px] bg-white rounded-2xl shadow-xl p-3 -rotate-3">
+          <div className="absolute left-0 top-6 w-[260px] bg-white rounded-2xl shadow-xl p-3 -rotate-3">
             <img
               src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&w=400&q=80"
               alt=""
@@ -29,12 +34,12 @@ export default function AuthVisual({ heading, description }) {
           </div>
 
           {/* Front card */}
-          <div className="absolute right-0 top-0 w-[240px] bg-white rounded-2xl shadow-2xl p-3 rotate-2">
+          <div className="absolute right-0 top-0 w-[300px] bg-white rounded-2xl shadow-2xl p-3 rotate-2">
             <div className="relative rounded-xl overflow-hidden">
               <img
                 src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=400&q=80"
                 alt=""
-                className="w-full h-28 object-cover"
+                className="w-full h-36 object-cover"
               />
               <div className="absolute bottom-2 left-2 right-2 flex gap-1 flex-wrap">
                 {['17 Lessons', '2 hours 16 mins', '59 Comments'].map((t) => (
@@ -61,7 +66,7 @@ export default function AuthVisual({ heading, description }) {
           </div>
 
           {/* Happy students badge */}
-          <div className="absolute left-6 bottom-0 bg-brand-lime rounded-2xl shadow-xl px-4 py-3 w-[190px] z-20">
+          <div className="absolute left-6 bottom-0 bg-brand-lime rounded-2xl shadow-xl px-4 py-3 w-[206px] z-20">
             <p className="text-[#14142B] text-xs">Happy Students</p>
             <p className="font-semibold text-sm mt-1">4.5 <span className="opacity-70">(240)</span> ★</p>
             <div className="flex items-center mt-2">

@@ -35,7 +35,7 @@ export default function CreatorProfile() {
       <section className="relative bg-brand-blue bg-grid overflow-hidden pb-16">
         <Navbar transparent />
 
-        <div className="relative z-10 max-w-[1200px] mx-auto px-6 pt-4">
+        <div className="relative z-10 max-w-[1200px] mx-auto px-6 pt-24">
           <div className="flex items-start gap-6 flex-wrap">
             <img
               src={creator.avatar}

@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import AuthVisual from '../components/auth/AuthVisual'
+import logo from '../assets/logo.png'
 
 const copy = {
   signup: {
@@ -127,23 +128,21 @@ export default function Register() {
   const { heading, description } = copy[mode]
 
   return (
-    <div className="flex min-h-screen">
+    <div className="min-h-screen bg-brand-blue bg-grid lg:flex">
       <AuthVisual heading={heading} description={description} />
 
-      <div className="relative flex-1 flex flex-col items-center justify-center px-6 sm:px-12 py-16">
+      <div className="relative flex-1 flex flex-col items-center justify-start px-6 sm:px-12 py-10 lg:pt-[34px]">
         <Link to="/" className="lg:hidden flex items-center gap-2 font-extrabold text-xl mb-12">
-          <svg width="26" height="26" viewBox="0 0 28 28" fill="none">
-            <path d="M4 2h10a8 8 0 0 1 0 16H10v8H4V2z" fill="#D4F72E" />
-            <path d="M10 10h4a4 4 0 0 1 0 8h-4v-8z" fill="#1A2CF0" />
-          </svg>
-          ByteSpace
+          <img src={logo} alt="ByteSpace" className="w-[150px] h-auto" />
         </Link>
 
-        {mode === 'signup' ? (
-          <SignupForm onSwitch={() => setMode('login')} />
-        ) : (
-          <LoginForm onSwitch={() => setMode('signup')} />
-        )}
+        <div className="w-full max-w-[500px] min-h-[720px] bg-white rounded-2xl px-8 sm:px-12 py-11 flex items-center">
+          {mode === 'signup' ? (
+            <SignupForm onSwitch={() => setMode('login')} />
+          ) : (
+            <LoginForm onSwitch={() => setMode('signup')} />
+          )}
+        </div>
       </div>
     </div>
   )

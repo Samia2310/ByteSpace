@@ -4,6 +4,7 @@ import Squiggle from '../decorations/Squiggle'
 import Triangle3D from '../decorations/Triangle3D'
 import Cube3D from '../decorations/Cube3D'
 import Ring from '../decorations/Ring'
+import boyFigure from '../../assets/boy.png'
 
 export default function Hero() {
   const [query, setQuery] = useState('')
@@ -12,29 +13,29 @@ export default function Hero() {
     <section className="relative bg-brand-blue bg-grid overflow-hidden">
       <Navbar transparent />
 
-      {/* Decorative shapes */}
+      {/* Decorative shapes — sit in the blue area, above the blob */}
       <Squiggle
         color="#D4F72E"
-        className="absolute -left-6 top-24 md:top-32 rotate-[-8deg] w-24 h-40 md:w-36 md:h-56 opacity-90"
+        className="absolute -left-6 top-20 md:top-28 -rotate-[15deg] w-28 h-44 md:w-40 md:h-64 opacity-95 z-10"
       />
       <Squiggle
         color="#ffffff"
-        className="absolute left-40 top-60 md:left-64 md:top-72 w-16 h-28 md:w-24 md:h-40 opacity-90 hidden sm:block"
+        className="absolute left-32 top-56 md:left-52 md:top-72 rotate-[6deg] w-14 h-24 md:w-20 md:h-32 opacity-90 hidden sm:block z-10"
       />
-      <Cube3D className="absolute -right-10 top-40 md:top-48 w-28 h-36 md:w-40 md:h-52 opacity-95 hidden sm:block" />
-      <Triangle3D className="absolute right-16 bottom-24 md:right-28 md:bottom-16 w-20 h-20 md:w-32 md:h-32 hidden sm:block" />
+      <Cube3D className="absolute -right-8 top-28 md:top-36 w-28 h-36 md:w-40 md:h-52 opacity-95 hidden sm:block z-10" />
+      <Triangle3D className="absolute right-[8%] top-[40%] md:top-[36%] w-16 h-16 md:w-28 md:h-28 hidden sm:block z-10" />
 
-      <div className="relative z-10 max-w-[1100px] mx-auto px-6 pt-8 md:pt-10 pb-0 text-center">
-        <h1 className="text-white font-extrabold leading-tight text-[2.1rem] sm:text-5xl md:text-6xl">
-          Get Access to Hundreds Courses Available
+      <div className="relative z-20 max-w-[1200px] mx-auto px-6 pt-24 md:pt-28 pb-0 text-center">
+        <h1 className="text-white font-extrabold leading-[1.08] text-[2.35rem] sm:text-5xl md:text-[4.5rem] tracking-[-0.02em]">
+          Get Access to Hundreds<br className="hidden sm:block" /> Courses Available
         </h1>
-        <p className="text-white/80 mt-6 max-w-2xl mx-auto text-sm md:text-base">
+        <p className="text-white/80 mt-4 md:mt-5 max-w-2xl mx-auto text-sm md:text-base">
           Unlock your creativity, gain valuable knowledge, and grow your business with our wide range of courses.
         </p>
 
         <form
           onSubmit={(e) => e.preventDefault()}
-          className="mt-8 mx-auto max-w-xl flex items-center bg-white rounded-full p-1.5 shadow-lg"
+          className="mt-6 md:mt-8 mx-auto max-w-xl flex items-center bg-white rounded-full p-1.5 shadow-[0_14px_30px_rgba(0,0,0,0.16)]"
         >
           <div className="flex items-center flex-1 px-4 gap-2">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#9CA3AF" strokeWidth="2">
@@ -58,37 +59,51 @@ export default function Hero() {
       </div>
 
       {/* Bottom lime blob + person + floating cards */}
-      <div className="relative mt-10 md:mt-4">
-        <div className="absolute inset-x-0 bottom-0 h-[70%] md:h-[75%] bg-brand-lime rounded-t-[50%] mx-[-10%]" />
+      <div className="relative mt-6 md:mt-4 min-h-[420px] md:min-h-[540px]">
+        <div
+  className="absolute left-1/2 bottom-0 w-[130%] sm:w-[113%] md:w-[103%] max-w-[1200px] h-[280px] sm:h-[360px] md:h-[430px] -translate-x-1/2 bg-brand-lime z-0"
+  style={{ borderRadius: '50% 50% 0 0 / 100% 100% 0 0' }}
+/>
+        {/* Neon lime ring */}
+        <Ring
+          color="#D4F72E"
+          size={130}
+          className="absolute left-[-50px] bottom-2 md:left-[-20px] md:bottom-4 hidden sm:block z-10 opacity-95 drop-shadow-[0_0_24px_rgba(212,247,46,0.85)]"
+        />
+        <Squiggle
+          color="#ffffff"
+          className="absolute right-4 bottom-12 md:right-10 md:bottom-16 rotate-[8deg] w-14 h-24 md:w-20 md:h-32 hidden md:block z-10"
+        />
 
-        <Ring color="#1A2CF0" size={140} className="absolute left-4 bottom-24 hidden md:block opacity-90" />
-        <Squiggle color="#ffffff" className="absolute right-6 bottom-10 w-16 h-28 md:w-20 md:h-36 hidden md:block" />
-
-        <div className="relative z-10 flex justify-center">
+        <div className="relative z-20 flex justify-center h-full">
           <img
-            src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=500&q=80"
+            src={boyFigure}
             alt="Student wearing headphones holding a laptop"
-            className="w-[260px] sm:w-[340px] md:w-[420px] object-cover object-top drop-shadow-2xl"
+            className="w-[280px] sm:w-[360px] md:w-[440px] h-auto object-contain self-end drop-shadow-2xl"
           />
         </div>
 
         {/* Floating info cards */}
-        <div className="absolute left-[6%] sm:left-[14%] bottom-[30%] sm:bottom-[26%] bg-white rounded-2xl shadow-xl px-5 py-4 w-[150px] sm:w-[190px]">
-          <p className="font-semibold text-sm sm:text-base">UI/UX Design</p>
-          <p className="text-gray-400 text-[11px] sm:text-xs mt-1">200 Courses &nbsp;•&nbsp; 1000+ Students</p>
+        <div className="absolute left-[4%] sm:left-[10%] top-[14%] sm:top-[18%] bg-white rounded-2xl shadow-xl px-5 py-4 w-[150px] sm:w-[200px] z-20">
+          <p className="font-semibold text-sm sm:text-base whitespace-nowrap">UI/UX Design</p>
+          <p className="text-gray-400 text-[11px] sm:text-xs mt-1 whitespace-nowrap">
+            200 Courses &nbsp;•&nbsp; 1000+ Students
+          </p>
         </div>
 
-        <div className="absolute right-[6%] sm:right-[16%] bottom-[38%] sm:bottom-[34%] bg-white rounded-2xl shadow-xl px-5 py-4 w-[150px] sm:w-[190px]">
-          <p className="text-gray-500 text-xs sm:text-sm">Learning Progress</p>
+        <div className="absolute right-[4%] sm:right-[12%] top-[22%] sm:top-[26%] bg-white rounded-2xl shadow-xl px-5 py-4 w-[150px] sm:w-[190px] z-20">
+          <p className="text-gray-500 text-xs sm:text-sm whitespace-nowrap">Learning Progress</p>
           <p className="font-extrabold text-2xl sm:text-3xl mt-1">55%</p>
           <div className="h-1.5 bg-gray-100 rounded-full mt-2 overflow-hidden">
             <div className="h-full bg-brand-lime w-[55%]" />
           </div>
         </div>
 
-        <div className="absolute left-[4%] sm:left-[10%] bottom-[6%] bg-white rounded-2xl shadow-xl px-5 py-4 w-[170px] sm:w-[210px] hidden sm:block">
-          <p className="text-gray-500 text-xs">Happy Students</p>
-          <p className="font-semibold text-sm mt-1">4.5 <span className="text-gray-400">(240)</span> ⭐</p>
+        <div className="absolute left-[6%] sm:left-[14%] bottom-[8%] bg-white rounded-2xl shadow-xl px-5 py-4 w-[170px] sm:w-[210px] hidden sm:block z-20">
+          <p className="text-gray-500 text-xs whitespace-nowrap">Happy Students</p>
+          <p className="font-semibold text-sm mt-1 whitespace-nowrap">
+            4.5 <span className="text-gray-400">(240)</span> ⭐
+          </p>
           <div className="flex items-center mt-2">
             {[1, 2, 3, 4, 5].map((i) => (
               <img

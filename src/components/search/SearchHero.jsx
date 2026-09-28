@@ -9,7 +9,7 @@ export default function SearchHero() {
     <section className="relative bg-brand-blue bg-grid overflow-hidden">
       <Navbar transparent />
 
-      <div className="relative z-10 max-w-[1100px] mx-auto px-6 pt-4 pb-16 md:pb-20 text-center">
+      <div className="relative z-10 max-w-[1100px] mx-auto px-6 pt-24 pb-16 md:pb-20 text-center">
         <h1 className="text-white font-extrabold text-3xl sm:text-4xl md:text-5xl">
           Find Your Next Course
         </h1>

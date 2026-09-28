@@ -4,8 +4,8 @@ import { courseDetail } from '../data/course'
 
 function VideoIcon() {
   return (
-    <span className="w-14 h-14 rounded-2xl bg-brand-lime flex items-center justify-center shrink-0">
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#14142B" strokeWidth="2">
+    <span className="w-[84px] h-[84px] rounded-3xl bg-brand-lime flex items-center justify-center shrink-0">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#14142B" strokeWidth="2">
         <rect x="2" y="6" width="14" height="12" rx="2" />
         <path d="m22 8-6 4 6 4V8Z" />
       </svg>
