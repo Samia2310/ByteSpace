@@ -35,7 +35,7 @@ export default function Navbar({ transparent = false }) {
         </ul>
 
         <div className={`hidden md:flex items-center gap-6 font-medium ${textColor}`}>
-          <Link to="/register" className="hover:opacity-80 transition-opacity">Sign In</Link>
+          <Link to="/login" className="hover:opacity-80 transition-opacity">Sign In</Link>
           <Link
             to="/register"
             className={`hover:opacity-80 transition-opacity ${transparent ? '' : ''}`}
@@ -68,7 +68,7 @@ export default function Navbar({ transparent = false }) {
             <Link key={l.label} to={l.to} onClick={() => setOpen(false)}>{l.label}</Link>
           ))}
           <hr />
-          <Link to="/register" onClick={() => setOpen(false)}>Sign In</Link>
+          <Link to="/login" onClick={() => setOpen(false)}>Sign In</Link>
           <Link to="/register" onClick={() => setOpen(false)}>Join Us</Link>
         </div>
       )}

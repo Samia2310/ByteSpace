@@ -8,9 +8,22 @@ html {
   scroll-behavior: smooth;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Poppins', system-ui, sans-serif;
   color: #14142B;
+  min-width: 320px;
+  overflow-x: hidden;
+}
+
+img,
+svg {
+  max-width: 100%;
 }
 
 .bg-grid {

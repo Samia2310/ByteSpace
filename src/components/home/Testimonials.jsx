@@ -24,8 +24,8 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section className="bg-gradient-to-br from-indigo-50 via-white to-lime-50 py-24 px-6">
-      <div className="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-start mb-14">
+    <section className="bg-gradient-to-br from-indigo-50 via-white to-lime-50 py-16 sm:py-24 px-4 sm:px-6">
+      <div className="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10 items-start mb-10 sm:mb-14">
         <h2 className="text-3xl sm:text-4xl font-extrabold leading-tight">
           Discover What Our Community Is Saying
         </h2>
@@ -39,7 +39,7 @@ export default function Testimonials() {
 
       <div className="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
         {testimonials.map((t) => (
-          <div key={t.name} className="bg-white rounded-2xl shadow-sm p-8">
+          <div key={t.name} className="bg-white rounded-2xl shadow-sm p-6 sm:p-8">
             <img src={t.avatar} alt={t.name} className="w-14 h-14 rounded-full object-cover mb-5" />
             <p className="font-bold">{t.name}</p>
             <p className="text-blue-600 text-sm mb-4">{t.role}</p>

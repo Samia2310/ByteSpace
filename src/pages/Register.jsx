@@ -1,5 +1,4 @@
-import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import AuthVisual from '../components/auth/AuthVisual'
 import logo from '../assets/logo.png'
 
@@ -123,24 +122,26 @@ function LoginForm({ onSwitch }) {
   )
 }
 
-export default function Register() {
-  const [mode, setMode] = useState('signup')
+export default function Register({ mode: routeMode }) {
+  const location = useLocation()
+  const navigate = useNavigate()
+  const mode = routeMode ?? (location.pathname.startsWith('/login') ? 'login' : 'signup')
   const { heading, description } = copy[mode]
 
   return (
     <div className="min-h-screen bg-brand-blue bg-grid lg:flex">
       <AuthVisual heading={heading} description={description} />
 
-      <div className="relative flex-1 flex flex-col items-center justify-start px-6 sm:px-12 py-10 lg:pt-[34px]">
+      <div className="relative flex-1 flex flex-col items-center justify-start px-4 sm:px-12 py-6 sm:py-10 lg:pt-[34px]">
         <Link to="/" className="lg:hidden flex items-center gap-2 font-extrabold text-xl mb-12">
           <img src={logo} alt="ByteSpace" className="w-[150px] h-auto" />
         </Link>
 
-        <div className="w-full max-w-[500px] min-h-[720px] bg-white rounded-2xl px-8 sm:px-12 py-11 flex items-center">
+        <div className="w-full max-w-[500px] min-h-0 sm:min-h-[720px] bg-white rounded-2xl px-5 sm:px-12 py-8 sm:py-11 flex items-center">
           {mode === 'signup' ? (
-            <SignupForm onSwitch={() => setMode('login')} />
+            <SignupForm onSwitch={() => navigate('/login')} />
           ) : (
-            <LoginForm onSwitch={() => setMode('signup')} />
+            <LoginForm onSwitch={() => navigate('/register')} />
           )}
         </div>
       </div>

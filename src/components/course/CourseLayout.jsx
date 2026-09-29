@@ -17,10 +17,10 @@ export default function CourseLayout({ courseId, course, children }) {
 
   return (
     <>
-      <section className="relative bg-brand-blue bg-grid overflow-hidden pb-56 sm:pb-64">
+      <section className="relative bg-brand-blue bg-grid overflow-hidden pb-40 sm:pb-56 lg:pb-64">
         <Navbar transparent />
 
-        <div className="relative z-10 max-w-[1280px] mx-auto px-6 pt-24">
+        <div className="relative z-10 max-w-[1280px] mx-auto px-4 sm:px-6 pt-24">
           <div className="flex items-start justify-between gap-4 flex-wrap">
             <div>
               <h1 className="text-white font-extrabold text-3xl sm:text-4xl md:text-5xl leading-tight max-w-2xl">
@@ -71,14 +71,14 @@ export default function CourseLayout({ courseId, course, children }) {
         </div>
       </section>
 
-      <div className="max-w-[1280px] mx-auto px-6 -mt-48 sm:-mt-56 relative z-10">
-        <div className="flex flex-col lg:flex-row gap-8 items-start">
+      <div className="max-w-[1280px] mx-auto px-4 sm:px-6 -mt-32 sm:-mt-48 lg:-mt-56 relative z-10">
+        <div className="flex flex-col lg:flex-row gap-6 sm:gap-8 items-start">
           <div className="flex-1 w-full min-w-0">
             <button
               type="button"
               aria-label={playing ? 'Pause course preview' : 'Play course preview'}
               onClick={() => setPlaying((p) => !p)}
-              className="relative w-full aspect-video rounded-[28px] overflow-hidden bg-gray-200 block"
+              className="relative w-full aspect-video rounded-2xl sm:rounded-[28px] overflow-hidden bg-gray-200 block"
             >
               <img src={course.video} alt="Course preview" className="w-full h-full object-cover" />
               {!playing && (
@@ -92,14 +92,13 @@ export default function CourseLayout({ courseId, course, children }) {
               )}
             </button>
 
-            <div className="mt-10">
+            <div className="mt-8 sm:mt-10">
               <CourseTabs courseId={courseId} />
               <div className="mt-8">{children}</div>
             </div>
           </div>
 
           <CourseSidebar
-            courseId={courseId}
             creator={course.creator}
             totalLessons={course.totalLessons}
             totalHours={course.totalHours}

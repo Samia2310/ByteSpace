@@ -18,9 +18,9 @@ const columns = [
 
 export default function Footer() {
   return (
-    <footer className="bg-white pt-20 pb-8 px-6 md:px-10">
+    <footer className="bg-white pt-16 sm:pt-20 pb-8 px-4 sm:px-6 md:px-10">
       <div className="max-w-[1440px] mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-[1.3fr_1fr_1fr_1fr] gap-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1fr_1fr] gap-10 md:gap-12">
           <div>
             <Link to="/" className="flex items-center mb-5">
               <img src={logo} alt="ByteSpace" className="w-[150px] h-auto" />
@@ -30,16 +30,16 @@ export default function Footer() {
             </p>
             <form
               onSubmit={(e) => e.preventDefault()}
-              className="flex items-stretch border border-gray-200 rounded-full overflow-hidden max-w-sm"
+              className="flex flex-col sm:flex-row items-stretch border border-gray-200 rounded-2xl sm:rounded-full overflow-hidden max-w-sm p-1 sm:p-0"
             >
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 px-5 py-3 outline-none text-sm"
+                className="flex-1 px-4 sm:px-5 py-3 outline-none text-sm min-w-0"
               />
               <button
                 type="submit"
-                className="bg-brand-lime text-[#14142B] font-semibold px-6 rounded-full m-1 hover:brightness-95 transition"
+                className="bg-brand-lime text-[#14142B] font-semibold px-6 py-3 sm:py-0 rounded-full sm:m-1 hover:brightness-95 transition"
               >
                 Search
               </button>
@@ -62,9 +62,9 @@ export default function Footer() {
 
         <hr className="my-10 border-gray-200" />
 
-        <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500">
-          <p>@ {new Date().getFullYear()} ByteSpace. All rights reserved.</p>
-          <div className="flex gap-6">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500 text-center md:text-left">
+          <p>@ 2023 ByteSpace. All rights reserved.</p>
+          <div className="flex flex-wrap justify-center md:justify-start gap-x-6 gap-y-2">
             <a href="#" className="hover:text-brand-blue">Privacy Policy</a>
             <a href="#" className="hover:text-brand-blue">Terms of Service</a>
             <a href="#" className="hover:text-brand-blue">Cookies Settings</a>
