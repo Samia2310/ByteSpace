@@ -10,18 +10,18 @@ const bullets = [
 
 export default function CreateManage() {
   return (
-    <section className="section-wash py-24">
-      <div className="max-w-[1280px] mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-14 items-center">
-        <div className="relative flex justify-center md:justify-start order-2 md:order-1">
+    <section className="section-wash py-16 sm:py-24">
+      <div className="max-w-[1280px] mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 sm:gap-14 items-center">
+        <div className="relative flex justify-center lg:justify-start order-2 lg:order-1">
         <Squiggle color="#D4F72E" className="absolute left-[61%] top-32 w-20 h-32 hidden sm:block z-20" />
-        <div className="relative w-full max-w-[600px] min-h-[560px]">
+        <div className="relative w-full max-w-[600px] min-h-[440px] sm:min-h-[560px]">
           <div className="absolute inset-x-16 bottom-4 h-72 rounded-full bg-gradient-to-t from-indigo-100/80 via-white/70 to-transparent blur-2xl" />
           <img
             src={girlFigure}
             alt="Creator wearing a headset holding a tablet"
-            className="relative z-10 mx-auto w-[330px] sm:w-[420px] h-auto max-h-[580px] object-contain drop-shadow-[0_24px_24px_rgba(20,20,43,0.16)]"
+            className="relative z-10 mx-auto w-full max-w-[260px] sm:max-w-[420px] h-auto max-h-[440px] sm:max-h-[580px] object-contain drop-shadow-[0_24px_24px_rgba(20,20,43,0.16)]"
           />
-          <div className="absolute left-0 top-0 bg-brand-blue text-white rounded-2xl shadow-lg px-5 py-4 w-[230px] sm:w-[270px] z-0">
+          <div className="absolute left-0 top-0 bg-brand-blue text-white rounded-2xl shadow-lg px-4 sm:px-5 py-3 sm:py-4 w-[180px] sm:w-[270px] z-0">
             <p className="text-xs opacity-80">Total Revenue</p>
             <p className="text-[10px] opacity-60">July 1-28</p>
             <p className="font-extrabold text-2xl mt-1">$120.29</p>
@@ -29,7 +29,7 @@ export default function CreateManage() {
               <div className="h-full bg-brand-lime w-[70%]" />
             </div>
           </div>
-          <div className="absolute left-0 top-40 bg-brand-blue text-white rounded-2xl shadow-lg px-5 py-4 w-[190px] sm:w-[230px] z-0">
+          <div className="absolute left-0 top-32 sm:top-40 bg-brand-blue text-white rounded-2xl shadow-lg px-4 sm:px-5 py-3 sm:py-4 w-[155px] sm:w-[230px] z-0">
             <p className="text-xs opacity-80">Year to Date</p>
             <p className="text-[10px] opacity-60">2023</p>
             <p className="font-extrabold text-2xl mt-1">$1,200.38</p>
@@ -37,7 +37,7 @@ export default function CreateManage() {
               +12$
             </span>
           </div>
-          <div className="absolute left-[48%] bottom-0 bg-white rounded-2xl shadow-lg px-5 py-4 w-[250px] sm:w-[276px] z-20">
+          <div className="absolute left-1/2 -translate-x-1/2 bottom-0 bg-white rounded-2xl shadow-lg px-4 sm:px-5 py-3 sm:py-4 w-[min(235px,90%)] sm:left-[48%] sm:translate-x-0 sm:w-[276px] z-20">
             <p className="text-gray-500 text-xs">Happy Students</p>
             <p className="font-semibold text-sm mt-1">4.5 <span className="text-gray-400">(240)</span> ⭐</p>
             <div className="flex items-center mt-2">
@@ -57,7 +57,7 @@ export default function CreateManage() {
         </div>
         </div>
 
-        <div className="order-1 md:order-2">
+        <div className="order-1 lg:order-2">
         <h2 className="text-[#202032] text-4xl sm:text-5xl font-extrabold leading-[1.08]">
           Create & Manage Courses Easily.
         </h2>

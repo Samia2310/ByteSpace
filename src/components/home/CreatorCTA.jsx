@@ -5,7 +5,7 @@ import Ring from '../decorations/Ring'
 
 export default function CreatorCTA() {
   return (
-    <section className="relative bg-brand-blue bg-grid overflow-hidden py-24 px-6 text-center">
+    <section className="relative bg-brand-blue bg-grid overflow-hidden py-16 sm:py-24 px-4 sm:px-6 text-center">
       <Squiggle color="#D4F72E" className="absolute -left-6 top-8 w-24 h-40 hidden sm:block" />
       <Squiggle color="#ffffff" className="absolute left-32 top-4 w-16 h-28 hidden md:block" />
       <Triangle3D className="absolute left-4 bottom-6 w-20 h-20 hidden md:block" />

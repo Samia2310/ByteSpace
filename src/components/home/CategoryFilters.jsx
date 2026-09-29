@@ -12,7 +12,7 @@ export default function CategoryFilters({ active, onChange }) {
   const visible = showAll ? categories : categories.slice(0, 18)
 
   return (
-    <section className="max-w-[1100px] mx-auto px-6 text-center pt-16 md:pt-24">
+    <section className="max-w-[1100px] mx-auto px-4 sm:px-6 text-center pt-16 md:pt-24">
       <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight">
         Discover Your Passion, Build Your Skills
       </h2>
@@ -27,7 +27,7 @@ export default function CategoryFilters({ active, onChange }) {
           <button
             key={cat}
             onClick={() => onChange(cat)}
-            className={`px-5 py-2.5 rounded-full text-sm font-medium transition ${
+          className={`px-4 sm:px-5 py-2.5 rounded-full text-sm font-medium transition ${
               active === cat
                 ? 'bg-brand-lime text-[#14142B]'
                 : 'bg-[#F2F2F4] text-gray-600 hover:bg-gray-200'

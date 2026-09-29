@@ -8,16 +8,20 @@ import ProfessionalGrowth from '../components/home/ProfessionalGrowth'
 import CreateManage from '../components/home/CreateManage'
 import CreatorCTA from '../components/home/CreatorCTA'
 import Testimonials from '../components/home/Testimonials'
+import { filterCourses, getCourses } from '../data/courses'
+
+const featuredCourses = getCourses(6)
 
 export default function Home() {
   const [activeCategory, setActiveCategory] = useState('Featured')
+  const visibleCourses = filterCourses(featuredCourses, { category: activeCategory })
 
   return (
     <>
       <Hero />
       <LogoStrip />
       <CategoryFilters active={activeCategory} onChange={setActiveCategory} />
-      <CourseGrid />
+      <CourseGrid courses={visibleCourses} activeCategory={activeCategory} />
       <LearningPaths />
       <ProfessionalGrowth />
       <CreateManage />

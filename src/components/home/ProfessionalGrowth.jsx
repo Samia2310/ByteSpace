@@ -9,8 +9,8 @@ const stats = [
 
 export default function ProfessionalGrowth() {
   return (
-    <section className="section-wash mt-28">
-      <div className="max-w-[1280px] mx-auto px-6 py-24 grid grid-cols-1 md:grid-cols-2 gap-14 items-center">
+    <section className="section-wash mt-20 sm:mt-28">
+      <div className="max-w-[1280px] mx-auto px-4 sm:px-6 py-16 sm:py-24 grid grid-cols-1 lg:grid-cols-2 gap-12 sm:gap-14 items-center">
         <div>
           <h2 className="text-[#202032] text-4xl sm:text-5xl font-extrabold leading-[1.08]">
             Your Path to Professional Growth Starts Here!
@@ -21,7 +21,7 @@ export default function ProfessionalGrowth() {
             industry expertise, or embark on a new career path entirely, we have the resources you need.
           </p>
 
-          <div className="flex gap-12 mt-12">
+          <div className="flex flex-wrap gap-x-8 gap-y-6 sm:gap-12 mt-12">
             {stats.map((s) => (
               <div key={s.label}>
                 <p className="text-[2.65rem] font-extrabold leading-none text-[#1f54e8]">{s.value}</p>
@@ -31,14 +31,14 @@ export default function ProfessionalGrowth() {
           </div>
         </div>
 
-        <div className="relative flex justify-center md:justify-end overflow-visible">
+        <div className="relative flex justify-center lg:justify-end overflow-visible">
           <Squiggle color="#D4F72E" className="absolute right-0 top-24 w-20 h-32 hidden sm:block z-30" />
-          <div className="relative w-[340px] sm:w-[560px] h-[480px]">
-            <div className="absolute left-0 top-0 w-[330px] sm:w-[420px] bg-white rounded-2xl border border-black/10 shadow-xl p-3 z-0">
+          <div className="relative w-full max-w-[560px] h-[430px] sm:h-[480px]">
+            <div className="absolute left-0 top-0 w-full max-w-[280px] sm:max-w-[420px] bg-white rounded-2xl border border-black/10 shadow-xl p-3 z-0">
               <img
                 src="https://images.unsplash.com/photo-1587440871875-191322ee64b0?auto=format&fit=crop&w=700&q=80"
                 alt="Course design workspace"
-                className="rounded-xl w-full h-[180px] sm:h-[220px] object-cover"
+              className="rounded-xl w-full h-[150px] sm:h-[220px] object-cover"
               />
               <p className="font-bold text-lg mt-4">Learn Figma from Basic</p>
               <p className="text-sm text-blue-600 mt-0.5">by purepearl studio</p>
@@ -53,9 +53,9 @@ export default function ProfessionalGrowth() {
             <img
               src={boyFigure}
               alt="Creator wearing headphones and holding a laptop"
-              className="absolute right-[-18px] sm:right-[4px] bottom-0 z-10 w-[300px] sm:w-[420px] h-auto object-contain drop-shadow-2xl"
+              className="absolute right-0 sm:right-[4px] bottom-0 z-10 w-full max-w-[160px] sm:max-w-[420px] h-auto object-contain drop-shadow-2xl"
             />
-            <div className="absolute right-[-10px] sm:right-[-8px] top-[235px] bg-white rounded-2xl shadow-lg px-5 py-4 w-[190px] sm:w-[230px] z-20">
+            <div className="absolute right-0 sm:right-[-8px] top-[190px] sm:top-[235px] max-[420px]:hidden bg-white rounded-2xl shadow-lg px-4 sm:px-5 py-3 sm:py-4 w-[170px] sm:w-[230px] z-20">
               <p className="text-gray-500 text-xs">Learning Progress</p>
               <p className="font-extrabold text-3xl mt-1">55%</p>
               <div className="h-1.5 bg-gray-100 rounded-full mt-2 overflow-hidden">

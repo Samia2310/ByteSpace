@@ -9,7 +9,7 @@ const paths = [
 
 export default function LearningPaths() {
   return (
-    <section className="max-w-[1200px] mx-auto px-6 pt-24 md:pt-28 text-center">
+    <section className="max-w-[1200px] mx-auto px-4 sm:px-6 pt-20 sm:pt-24 md:pt-28 text-center">
       <h2 className="text-3xl sm:text-4xl font-extrabold">Explore Diverse Learning Paths at Bytespace</h2>
       <p className="text-gray-500 mt-5 max-w-2xl mx-auto text-sm md:text-base">
         At Bytespace, we believe in empowering individuals through knowledge. Our diverse range of
@@ -17,11 +17,11 @@ export default function LearningPaths() {
         and explore our carefully curated categories.
       </p>
 
-      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 mt-12">
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4 mt-10 sm:mt-12">
         {paths.map((p) => (
           <div
             key={p.label}
-            className="soft-card rounded-2xl py-8 px-4 flex flex-col items-center gap-4 hover:shadow-md hover:-translate-y-0.5 transition"
+            className="bg-white border border-gray-200 rounded-2xl py-6 sm:py-8 px-3 sm:px-4 flex flex-col items-center gap-3 sm:gap-4 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition"
           >
             <span className="w-14 h-14 rounded-full bg-brand-lime flex items-center justify-center">
               <svg width="27" height="27" viewBox="0 0 24 24" fill="none" stroke="#14142B" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

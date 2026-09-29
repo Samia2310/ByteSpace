@@ -41,9 +41,9 @@ const includes = [
   },
 ]
 
-export default function CourseSidebar({ courseId, remainingLessons = 99, totalLessons = 112, totalHours = 24, price = 25, creator }) {
+export default function CourseSidebar({ remainingLessons = 99, totalLessons = 112, totalHours = 24, price = 25, creator }) {
   return (
-    <aside className="bg-white rounded-3xl shadow-2xl p-7 sm:p-8 w-full lg:w-[420px] shrink-0">
+    <aside className="bg-white rounded-2xl sm:rounded-3xl shadow-2xl p-5 sm:p-8 w-full lg:w-[420px] shrink-0">
       <h2 className="text-xl font-extrabold mb-6">
         {totalLessons} Lessons ({totalHours} hours)
       </h2>

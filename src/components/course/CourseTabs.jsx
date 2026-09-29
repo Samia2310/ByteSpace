@@ -8,14 +8,14 @@ export default function CourseTabs({ courseId }) {
   ]
 
   return (
-    <div className="flex gap-3">
+    <div className="flex gap-2 sm:gap-3 overflow-x-auto pb-1 -mx-4 px-4 sm:mx-0 sm:px-0">
       {tabs.map((t) => (
         <NavLink
           key={t.label}
           to={t.to}
           end={t.end}
           className={({ isActive }) =>
-            `px-6 py-2.5 rounded-full text-sm font-medium transition ${
+            `px-4 sm:px-6 py-2.5 rounded-full text-sm font-medium transition ${
               isActive ? 'bg-brand-lime text-[#14142B]' : 'bg-[#F2F2F4] text-gray-600 hover:bg-gray-200'
             }`
           }

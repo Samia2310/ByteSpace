@@ -4,7 +4,7 @@ export default function CourseCard({ course }) {
   return (
     <Link
       to={`/course/${course.id}`}
-      className="block bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow p-3"
+      className="block min-w-0 bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow p-3"
     >
       <div className="relative rounded-xl overflow-hidden aspect-[4/3]">
         <img
@@ -16,7 +16,7 @@ export default function CourseCard({ course }) {
           {['17 Lessons', '2 hours 16 mins', '59 Comments'].map((tag) => (
             <span
               key={tag}
-              className="bg-black/50 text-white text-[11px] px-2.5 py-1 rounded-full backdrop-blur-sm"
+              className="bg-black/50 text-white text-[10px] sm:text-[11px] px-2 sm:px-2.5 py-1 rounded-full backdrop-blur-sm"
             >
               {tag}
             </span>
@@ -32,7 +32,7 @@ export default function CourseCard({ course }) {
       </div>
       <p className="text-sm text-blue-600">by purepearl studio</p>
 
-      <div className="flex items-center justify-between mt-3">
+      <div className="flex flex-wrap items-center justify-between gap-2 mt-3">
         <span className="bg-[#F2F2F4] text-gray-600 text-xs px-3 py-1.5 rounded-full flex items-center gap-1.5">
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
             <path d="M3 20V10M10 20V4M17 20v-7" />
